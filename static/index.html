@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>24Online Client</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<meta http-equiv="cache-control" content="max-age=0, must-revalidate, no-cache, no-store, private" />
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="expires" content="-1" />
+
+	<style type="text/css">
+		.mystyle1 {
+			FONT-SIZE: 10;
+		}
+
+		.text1 {
+			font-size: 11px
+		}
+	</style>
+	<style type="text/css">
+		.otpclass {
+			display: none;
+		}
+
+		.phoneclass {
+			display: none;
+		}
+
+		.captchaclass {
+			display: none;
+		}
+
+		#logingetotpbtn:disabled {
+			background: #ccc;
+		}
+
+		#registergetotp:disabled {
+			background: #ccc;
+		}
+	</style>
+	<link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.html" />
+</head>
+
+<body bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"
+	onload="loadPackageDetails();focusUsername();loadCPProfileGroupDetails();loadOTPCaptcha();replacejsfile();"
+	onbeforeunload="accessHotelUserWindowParam();" onFocus="gotFocus();" onblur="lostFocus();">
+
+	<form action="/data" method="post" target="_parent"
+		name="clientloginform">
+		<div id="jsena" style="display:'none'">
+			<table width="100%" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="100%">
+						<!doctype html>
+						<html lang="en">
+						<head>
+							<meta charset="utf-8">
+							<title>Staff/Student Login</title>
+							<link href="./bootstrap1.css" rel="stylesheet" />
+							<style type="text/css">
+								.bg {
+									background-image: linear-gradient(to right top, #ffba80, #ffaead, #ffb3df, #d0c2fe, #9dd0ff);
+									height: 100vh
+								}
+
+								.container {
+									display: flex;
+									justify-content: center;
+									align-items: center;
+									height: 99vh;
+									flex-direction: column;
+								}
+
+								.login-section {
+									padding: 3rem 1rem;
+									background: linear-gradient(to right top, #ffffff, #f0f1ff, #dbe4ff, #c0daff, #9dd0ff)
+								}
+
+								.login-field {
+									background: #FFF;
+									display: flex;
+									justify-content: center;
+									align-items: center;
+									flex-direction: column;
+									background: rgb(255, 255, 255, .2);
+									box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5)
+								}
+
+								.bshadow {
+									box-shadow: 0 0 20px #000;
+								}
+
+								.login-field label {
+									display: block;
+									margin-bottom: 15px
+								}
+
+								.login-field input[type=text],
+								.login-field input[type=password] {
+									display: block;
+									margin-bottom: 15px;
+									width: 90%;
+									padding: 0.375rem 0.75rem;
+									font-size: 1rem;
+									font-weight: 400;
+									line-height: 1.5;
+									color: #212529;
+									background-color: #fff;
+									background-clip: padding-box;
+									border: 1px solid #ced4da;
+									-webkit-appearance: none;
+									-moz-appearance: none;
+									appearance: none;
+									border-radius: 0.375rem;
+									transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+								}
+
+								.buttonstyle {
+									display: inline-block;
+									height: auto;
+									padding: 6px 12px;
+									margin-bottom: 0;
+									font-size: 14px;
+									font-weight: normal;
+									line-height: 1.42857143;
+									text-align: center;
+									white-space: nowrap;
+									vertical-align: middle;
+									cursor: pointer;
+									-webkit-user-select: none;
+									-moz-user-select: none;
+									-ms-user-select: none;
+									user-select: none;
+									background-image: none;
+									border: 1px solid transparent;
+									border-radius: 4px;
+								}
+
+								.alert {
+									color: #f68220;
+									font-size: 20px;
+									letter-spacing: 0.5px;
+								}
+
+								@media(max-width:1200px) {
+									.btn {
+										width: 190px;
+										margin-bottom: 7px
+									}
+								}
+
+								@media(max-width:992px) {
+									.login-section {
+										padding: 1rem 1rem;
+									}
+
+									.btn {
+										width: 190px;
+										margin-bottom: 7px
+									}
+
+									.container {
+										height: auto
+									}
+
+									.w-75 {
+										width: auto !important;
+										height: 100px;
+										overflow-y: scroll
+									}
+
+									.login-field {
+										padding: 25px 0 !important
+									}
+
+									.login-field .cdiv {
+										width: 80%
+									}
+
+									.card-title {
+										text-align: center
+									}
+
+									.bg {
+										height: auto
+									}
+
+									h1 {
+										font-size: 18px
+									}
+
+									small {
+										display: block
+									}
+								}
+							</style>
+						</head>
+
+						<body class="bg" data-gr-ext-installed="" data-new-gr-c-s-check-loaded="14.1119.0">
+							<script
+								type="text/javascript"> function appendUserName() { var pwd = document.forms[0].password.value; var typedUserName = document.forms[0].username.value; if (pwd.trim() == "123456") { alert("Password cannot be 123456"); return false; } document.forms[0].username.value = typedUserName.trim() + "@lpu.com"; return validateLogin(); } function policycheck() { var checker = document.getElementById("agreepolicy"); var sendbtn = document.getElementById("loginbtn"); checker.onchange = function () { if (this.checked) { sendbtn.disabled = false; } else { sendbtn.disabled = true; } }; } </script>
+							<div class="container">
+								<div class="row bshadow">
+									<div class="col-lg-8 login-section">
+										<div class="text-center pt-4 pb-3"><img alt=""
+												src="./logo.png" style="width: 246px;" />
+										</div>
+										<div class="pt-2 pb-3 w-75 " style="margin:0 auto">
+											<p style="font-weight: 500; font-size: 14px; text-align: justify;">I
+												understand, agree with, confirm and will abide by the University
+												Internet usage policy interalia that this LPU internet access/
+												connectivity is provided/ allowed as a privilege to me for academic
+												support only and any prohibited or unauthorized use is not permitted to
+												me. I further understand and undertake that any unauthorized
+												downloading, access, viewing or usage etc of any website, software,
+												material, information, data, etc. (pertaining to the university or trust
+												and their associates/ constituents or external agency or third party)
+												through internet connectivity/ access/ usage so provided by the
+												university, shall be at my sole risk and responsibility and the
+												university shall not be responsible for the same and I hereby indemnify
+												and shall keep indemnified the LPU or Trust and their associates/
+												constituents at all times from consequences arising from aforesaid any
+												unauthorized/ prohibited act done by me.</p>
+										</div>
+										<div class="pt-2 pb-3 w-75" style="margin:0 auto"><input id="agreepolicy"
+												onclick="policycheck()" type="checkbox" /><strong> I Agree with Terms
+												and Conditions </strong><small>(You must agree with terms and conditions
+												before login.)</small></div>
+									</div>
+									<div class="col-lg-4 login-field">
+										<div class="cdiv">
+											<h4 class="card-title">Client Login</h4>
+											<p class="alert"><strong></strong></p>
+										</div>
+										<div class="mt-2 cdiv"><label class="form-label">User Name</label> <input
+												type='text' name='username'></div>
+										<div class="mt-2 cdiv"><label class="form-label">Password</label> <input
+												type='password' name='password'></div>
+										<div class="mt-2 cdiv"><input type=checkbox name=saveinfo
+												value="saveinfo">&nbsp;<strong>Save Password</strong></div>
+										<div class="text-center mt-2"><button class="btn btn-primary btn-sm"
+												disabled="disabled" id="loginbtn" onclick="return appendUserName()"
+												title="Please tick that you agree to Terms and Condtitions."
+												type="submit" value="Login">Login</button></div>
+										<div class="text-center mt-3"><a class="btn btn-primary btn-sm"
+												href="http://10.10.0.1/24online/webpages/sysmgt/clientloginpreview.jsp?clientloginid=120"
+												target="_blank">Internet Access Policy</a></div>
+									</div>
+								</div>
+							</div>
+						</body>
+					</td>
+				</tr>
+
+			</table>
+
+		</div>
+	</form>
+</body>
+
+</html>
