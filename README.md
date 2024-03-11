@@ -1,1 +1,4 @@
-<center><h1>Shhhhhhhhhh 🤫</h1></center>
+<h1 align="center">Shhhhhhhhhh 🤫</h1>
+
+> [!WARNING]  
+> For educational purposes only, really.
