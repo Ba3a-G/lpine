@@ -15,6 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 app.use('/24online/servlet/E24onlineHTTPClient', express.static('static'));
+app.use('/lpuums', express.static('ums'))
 
 app.get('/', (req, res) => {
     res.redirect('/24online/servlet/E24onlineHTTPClient')
